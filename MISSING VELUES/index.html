@@ -42,7 +42,7 @@
     
     
       
-        <title>mising velues - (180411100007) Moh. Imam Wahyudi</title>
+        <title>jarak - (180411100007) Moh. Imam Wahyudi</title>
       
     
     
@@ -118,7 +118,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#missing-velues" tabindex="1" class="md-skip">
+      <a href="#jarak" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -144,7 +144,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                mising velues
+                jarak
               
             </span>
           
@@ -288,11 +288,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        mising velues
+        jarak
       </label>
     
-    <a href="./" title="mising velues" class="md-nav__link md-nav__link--active">
-      mising velues
+    <a href="./" title="jarak" class="md-nav__link md-nav__link--active">
+      jarak
     </a>
     
       
@@ -320,6 +320,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Untitled8/" title="MISSING VELLUES" class="md-nav__link">
+      MISSING VELLUES
+    </a>
   </li>
 
     
@@ -369,10 +381,8 @@
                   <a href="https://github.com/imamwahyudi/edit/master/docs/MISSING VELUES.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="missing-velues">MISSING VELUES<a class="headerlink" href="#missing-velues" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>didalam menghitung mising velues dengan menggunakan metode K-NN disini kita harus menghitung jaraknya terlebih dahulu</p>
-</blockquote>
+                <h1 id="jarak">jarak<a class="headerlink" href="#jarak" title="Permanent link">&para;</a></h1>
+<blockquote></blockquote>
 <h4 id="menghitung-jarak-tipe-numerik">Menghitung jarak tipe numerik<a class="headerlink" href="#menghitung-jarak-tipe-numerik" title="Permanent link">&para;</a></h4>
 <p>Salah satu tantangan dalam era ini dengan datatabase yang memiliki banyak tipe data. Mengukur jarak adalah komponen utama dalam algoritma clustering berbasis jarak. Alogritma seperit Algoritma Partisioning misal K-Mean, K-medoidm dan fuzzy c-mean dan rough clustering bergantung pada jarak untuk melakukan pengelompokkan</p>
 <p>Sebelum menjelaskan tentang beberapa macam ukuran jarak, kita mendefinisikan terlebih dahulu yaiut v1,v2 menyatakandua vektor yang menyatakan v1=x1,x2,...,xn,v2=y1,y2,...,yn, dimana xi,yi disebut attribut. Ada beberapa ukuran similaritas datau ukuran jarak, diantaranya</p>
@@ -407,7 +417,7 @@
 <li>
 <p><em>Chord distance</em>
    $$
-    d _ { \text {chord} } = \left ( 2 - 2 \frac { \sum _ { i = 1 } ^ { n } x _ { i } y _ { i } } { | x | _ { 2 } | y | _ { 2 } } \right) ^ { \frac { 1 } { 2 } }
+   d _ { \text {chord} } = \left ( 2 - 2 \frac { \sum _ { i = 1 } ^ { n } x _ { i } y _ { i } } { | x | _ { 2 } | y | _ { 2 } } \right) ^ { \frac { 1 } { 2 } }
    $$
    dimana <br />
    $$
@@ -420,8 +430,14 @@
 <p>rumus
    $$
    z _ { i f } = \frac { r _ { i f } - 1 } { M _ { f } - 1 }
-   $$
-   berikut menghitung jarak dengan python</p>
+   $$</p>
+<p>##### <strong>Menghitung jarak Binary</strong></p>
+<p>Mari kita lihat similaritas dan desimilirity untuk objek yang dijelaskan oleh atribut biner simetris atau asimetris. Aatribut biner hanya memiliki dua status: 0 dan 1 Contoh atribut perokok menggambarkan seorang pasien, misalnya, 1 menunjukkan bahwa pasien merokok, sedangkan 0 menunjukkan pasien tidak merokok. Memperlakukan atribut biner sebagai atribut numerik tidak diperkenankan. Oleh karena itu, metode khusus untuk data biner diperlukan untuk membedakan komputasi.</p>
+<p>Jadi, bagaimana kita bisa menghitung ketidaksamaan antara dua atribut biner? ”Satu pendekatan melibatkan penghitungan matriks ketidaksamaan dari data biner yang diberikan. Jika semua atribut biner dianggap memiliki bobot yang sama, kita memiliki tabel kontingensi 2×22×2 di mana qq adalah jumlah atribut yang sama dengan 1 untuk kedua objek ii dan jj, rr adalah jumlah atribut yang sama dengan 1 untuk objek ii tetapi 0 untuk objek jj, ss adalah jumlah atribut yang sama dengan 0 untuk objek ii tetapi 1 untuk objek jj, dan tt adalah jumlah atribut yang sama dengan 0 untuk kedua objek ii dan jj. Jumlah total atribut adalah pp, di mana p=q+r+s+t</p>
+<p>$$
+   d ( i , j ) = \frac { r + s } { q + r + s + t }
+   $$</p>
+<p>berikut menghitung jarak dengan python</p>
 <p>~~~py
    import pandas as pd
    import math as mt
@@ -510,13 +526,13 @@
        3 : ['Abi', '', '', 0]
    }
    #ambil data numerikal
-   aliNum = df.iloc[0, 2:4].values
-   aniNum = df.iloc[1, 2:4].values
-   abiNum = df.iloc[2, 2:4].values
+   imamNum = df.iloc[0, 2:4].values
+   suciNum = df.iloc[1, 2:4].values
+   rizkyNum = df.iloc[2, 2:4].values
    #normalisasi data numerikal
-   aliNum = [normalisasi(aliNum[0], data.columns[2]), normalisasi(aliNum[1], data.columns[3])]
-   aniNum = [normalisasi(aniNum[0], data.columns[2]), normalisasi(aniNum[1], data.columns[3])]
-   abiNum = [normalisasi(abiNum[0], data.columns[2]), normalisasi(abiNum[1], data.columns[3])]</p>
+   imamNum = [normalisasi(aliNum[0], data.columns[2]), normalisasi(aliNum[1], data.columns[3])]
+   suciNum = [normalisasi(aniNum[0], data.columns[2]), normalisasi(aniNum[1], data.columns[3])]
+   suciNum = [normalisasi(abiNum[0], data.columns[2]), normalisasi(abiNum[1], data.columns[3])]</p>
 <p>d_x[1][2] = euclidianDistance(aniNum,aliNum)
    d_x[1][3] = euclidianDistance(abiNum,aliNum)
    d_x[2][3] = euclidianDistance(abiNum,aniNum)</p>
@@ -713,6 +729,20 @@ MathJax.Hub.Config({
             </div>
           </a>
         
+        
+          <a href="../Untitled8/" title="MISSING VELLUES" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                MISSING VELLUES
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
