@@ -331,6 +331,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../DECISION TREE/" title="DECISION TREE" class="md-nav__link">
+      DECISION TREE
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1265,6 +1277,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1423,6 +1436,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -2140,6 +2154,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -2205,6 +2220,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -2333,6 +2349,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -3254,6 +3271,7 @@
         vertical-align: middle;
     }
 
+​    
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -4604,13 +4622,6 @@
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -4655,22 +4666,13 @@
 </table>
 </div>
 
-<div class="codehilite"><pre><span></span><span class="c1"># importing pandas as pd </span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
-
-<span class="c1"># importing numpy as np </span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> 
-
-<span class="c1"># dictionary of lists </span>
 <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;First Score&#39;</span><span class="p">:[</span><span class="mi">100</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span> 
         <span class="s1">&#39;Second Score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">56</span><span class="p">],</span> 
         <span class="s1">&#39;Third Score&#39;</span><span class="p">:[</span><span class="mi">52</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">98</span><span class="p">],</span> 
-        <span class="s1">&#39;Fourth Score&#39;</span><span class="p">:[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">65</span><span class="p">]}</span> 
-
-<span class="c1"># creating a dataframe from dictionary   </span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span> 
-
-<span class="c1"># using dropna() function      </span>
+        <span class="s1">&#39;Fourth Score&#39;</span><span class="p">:[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">65</span><span class="p">]}</span>  
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>      
 <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> 
 </pre></div>
 
@@ -4681,13 +4683,6 @@
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -4717,13 +4712,8 @@
 </table>
 </div>
 
-<div class="codehilite"><pre><span></span><span class="c1"># importing pandas module  </span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>  
-
-<span class="c1"># making data frame from csv file  </span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;employees.csv&quot;</span><span class="p">)</span>  
-
-<span class="c1"># making new data frame with dropped NA values  </span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>  
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;employees.csv&quot;</span><span class="p">)</span>   
 <span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>  
 
 <span class="n">new_data</span> 
@@ -4736,13 +4726,6 @@
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -5471,6 +5454,20 @@
             </div>
           </a>
         
+        
+          <a href="../DECISION TREE/" title="DECISION TREE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                DECISION TREE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
