@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://imamwahyudi.github.io/</loc>
-     <lastmod>2019-10-03</lastmod>
+     <lastmod>2019-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://imamwahyudi.github.io/pengertian/</loc>
-     <lastmod>2019-10-03</lastmod>
+     <lastmod>2019-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://imamwahyudi.github.io/MISSING VELUES/</loc>
-     <lastmod>2019-10-03</lastmod>
+     <lastmod>2019-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://imamwahyudi.github.io/Untitled8 (1)/</loc>
-     <lastmod>2019-10-03</lastmod>
+     <lastmod>2019-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://imamwahyudi.github.io/DECISION TREE/</loc>
-     <lastmod>2019-10-03</lastmod>
+     <lastmod>2019-11-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://imamwahyudi.github.io/clustering/</loc>
+     <lastmod>2019-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
