@@ -13,7 +13,7 @@
         <meta name="description" content="Repository Untuk Tugas">
       
       
-        <link rel="canonical" href="https://imamwahyudi.github.io/Integrasi Numerik/">
+        <link rel="canonical" href="https://imamwahyudi.github.io/Extrapolasi Richardsonp/">
       
       
         <meta name="author" content="Moh. Imam Wahyudi">
@@ -42,7 +42,7 @@
     
     
       
-        <title>integrasi numerik - (180411100007) Moh. Imam Wahyudi</title>
+        <title>Extrapolasi Richardsonp - (180411100007) Moh. Imam Wahyudi</title>
       
     
     
@@ -118,7 +118,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#integrasi-numerik" tabindex="1" class="md-skip">
+      <a href="#richardson-extrapolation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -144,7 +144,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                integrasi numerik
+                Extrapolasi Richardsonp
               
             </span>
           
@@ -480,6 +480,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Integrasi Numerik/" title="integrasi numerik" class="md-nav__link">
+      integrasi numerik
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -491,11 +503,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        integrasi numerik
+        Extrapolasi Richardsonp
       </label>
     
-    <a href="./" title="integrasi numerik" class="md-nav__link md-nav__link--active">
-      integrasi numerik
+    <a href="./" title="Extrapolasi Richardsonp" class="md-nav__link md-nav__link--active">
+      Extrapolasi Richardsonp
     </a>
     
       
@@ -509,8 +521,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metode-rumberg" class="md-nav__link">
-    metode rumberg
+  <a href="#contoh" class="md-nav__link">
+    Contoh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solusi" class="md-nav__link">
+    Solusi
   </a>
   
 </li>
@@ -523,18 +542,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Extrapolasi Richardsonp/" title="Extrapolasi Richardsonp" class="md-nav__link">
-      Extrapolasi Richardsonp
-    </a>
   </li>
 
         
@@ -564,8 +571,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#metode-rumberg" class="md-nav__link">
-    metode rumberg
+  <a href="#contoh" class="md-nav__link">
+    Contoh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solusi" class="md-nav__link">
+    Solusi
   </a>
   
 </li>
@@ -586,90 +600,113 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/imamwahyudi/edit/master/docs/Integrasi Numerik.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/imamwahyudi/edit/master/docs/Extrapolasi Richardsonp.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <p><a href="https://mohimamwahyudi.github.io/Integrasi Numerik/">https://mohimamwahyudi.github.io/Integrasi%20Numerik/</a></p>
-<h1 id="integrasi-numerik"><strong>Integrasi</strong> <em>Numerik</em><a class="headerlink" href="#integrasi-numerik" title="Permanent link">&para;</a></h1>
-<h4 id="metode-rumberg">metode <em>rumberg</em><a class="headerlink" href="#metode-rumberg" title="Permanent link">&para;</a></h4>
-<p>Metode integrasi Romberg didasarkan pada perluasan ekstrapolasi Richardson untuk memperoleh nilai integrasi yang semakin baik. Sebagai catatan, setiap penerapan ekstrapolasi Richardson akan menaikkan order galat pada hasil solusinya sebesar dua: $O( h 2N ) → O(h 2 N+2 O( h ) → O(h )$.  Misalnya,bila I(h) dan I(2h) dihitung dengan kaidah trapesium yang berorde galat O(h 2), maka ekstrapolasi Richardson menghaslkan kaidah Simpson 1/3 yang berorde O(h 4). Selanjutnya, bila I(h) dan I(2h) dihitung dengan kaidah Simpson 1/3, ekstrapolasi Richardson menghaslkan kaidah Boole yang berorde O(h 6).</p>
-<p>Tinjau kembali persamaan ekstrapolasi Richardson: 
+                <h1 id="richardson-extrapolation">Richardson Extrapolation<a class="headerlink" href="#richardson-extrapolation" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Dalam analisis numerik, Richardson Extrapolation adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan. </p>
+<p>Richardson Extrapolation termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
+</blockquote>
+<p>Beda terpusat (Central Difference):
 $$
-J = I(h)+{1(h)-I(2h)\over(2^q -1)}
+f^,(x) ={f(x+h)-f(x-h)\over 2h}+ O (h^2)
 $$
-misalkan <em>I</em> adalah nilai integrasi yang di nyatakan sebagai </p>
-<p>I = Ak + Ch2 + Dh4 + Eh6 + ... </p>
-<p>yang dalam hal ini</p>
-<p>h=(b-a)/n dan ak = perkiraan nilai integrasi dengan  kaidah trapesium  dan jumlah pias $n = 2^k$</p>
-<p>Gunakan A0, A1,...Ak pada persamaan ekstrapolasi Richardson untuk mendapatkan runtunan B1, B2, ...,Bk , yaitu
+Dapat kita mendapat formula terbaik ?</p>
+<p>Ditetapkan f (x) dan x tertentu:
 $$
-B_k = A_k + {A_k -A_k{_-1}\over 2^2-1}
-$$
-Jadi, nilai I (yang lebih baik) sekarang adalah I = Bk + D'h4 + E'h6 +… dengan orde galat Bk adalah O(h4). </p>
-<p>Selanjutnya, gunakan B1, B2 ,.., Bk pada persamaan ekstrapolasi Richardson untuk mendapatkan runtunan C2, C3,..., Ck, yaitu 
-$$
-C_k = B_K + {B_k - B_k{_-1}\over 2^4-1}
-$$
-Jadi, nilai I (yang lebih baik) sekarang adalah I = Ck + E " h6 + ... dengan orde galat Ck adalah O(h6). </p>
-<p>Selanjutnya, gunakan C2, C3 ,..., Ck pada persamaan ekstrapolasi Richardson untuk mendapatkan runtunan D3 , D4 , ... , Dk , yaitu 
-$$
-D_k = C_k +{ C_k-C_k{_-1}\over 2^6-1}
-$$
-Jadi, nilai I (yang lebih baik) sekarang adalah I = Dk + E "' h8 + ... dengan orde galat Dk adalah O(h8). Demikian seterusnya. </p>
-<p>Dari runtunan tersebut, diperoleh tabel yang dinamakan tabel Romberg seperti berikut ini</p>
-<p><img alt="" src="../tabel1.png" /></p>
-<p><img alt="" src="../tabel2.png" /></p>
-<p><img alt="" src="../tabel3.png" /></p>
-<p><img alt="" src="../tabel4.png" /></p>
-<h1 id="listing-program-rumberg-in-python">listing program rumberg in python<a class="headerlink" href="#listing-program-rumberg-in-python" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+Ø(h)={f(x+h)-f(x-h)\over 2h}
+$$</p>
+<p>$$
+Ø(h)= f^, (x) - a_2 h^2 - a_4h^4-a_6h^6-.....
+$$</p>
+<p>$$
+Ø({h\over 2}) = f^, (x)-a_2|{h\over2}|^2-a_4|{h\over4}|^4-a_6|{h\over5}|^6 -....
+$$</p>
+<p>$$
+Ø(h)-4Ø({h\over2}) = -3f^,(x)-{3\over4}a_4h^4-{15\over16}a_6h^6-...
+$$</p>
+<p>$$
+=&gt; f^,(x) = {4\over3}Ø({h\over2})-{1\over3}Ø(h)+O(h^4)
+$$</p>
+<h2 id="contoh">Contoh<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h2>
+<p>• Gunakan fungsi:</p>
+<p>​   $f(x)=-0.1x^4-0.15x^3-0.5x^2-0.25x+1.2$ </p>
+<p>​   Mulai dari $h_1=0.5$ dan $h_2=0.25$ hitung estimasi         dengan  $f^,(0.5)$ menggunakan richardson   Extrapolation</p>
+<p>• nilai sesungguhnya $f^,(0.5)=-0.9125$</p>
+<h2 id="solusi">Solusi<a class="headerlink" href="#solusi" title="Permanent link">&para;</a></h2>
+<p>Turunan pertama dapat dihitung dengan beda terpusat ( centered differences) yaitu:</p>
+<p>$Ø(h)={f(0.5+h)-f(0.5-h)\over 2h}$ pada x =0.5</p>
+<p>$Ø(0.5)={f(1)-f(0)\over 1}={0.2-1.2\over1}=-1.0, |Ƹ_t|=2.4%$ </p>
+<p>Estimasi dapat di perbaiki dengan menggunakan :</p>
+<p>$f^,(0.5)={4\over 3}Ø({h\over2})-{1\over3}Ø(h)={4\over3}(-0.934375)-{1\over3}(-1)=-0.9125$</p>
+<p>yang menghasilkan nilai yang sama</p>
+<h1 id="tabel-richardson-extrapolation">Tabel Richardson Extrapolation<a class="headerlink" href="#tabel-richardson-extrapolation" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D(0,0) = Ø (h)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D(1,0) =Ø(h/2)</td>
+<td>D(11)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D(2,0)=Ø(h/4)</td>
+<td>D(2,1)</td>
+<td>D(2,2)</td>
+<td></td>
+</tr>
+<tr>
+<td>D(3,0)=Ø(h/8)</td>
+<td>D(3,1)</td>
+<td>D(3,2)</td>
+<td>D(3,3)</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span> 
+    <span class="n">Z</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">Z</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Z</span>
 
+<span class="k">def</span> <span class="nf">D</span><span class="p">(</span><span class="n">Func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>   
+    <span class="k">return</span> <span class="p">(</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">Func</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">trapezcomp</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">Richardson_dif</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">):</span> 
+    <span class="n">k</span><span class="o">=</span><span class="mi">9</span> 
+    <span class="n">L</span><span class="o">=</span><span class="n">zeros</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">I</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="n">L</span><span class="p">[</span><span class="n">I</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">I</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="n">j</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Numerical differentiation of Func=-0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 at x=0.5&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
 
-    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span>
-
-
-    <span class="n">In</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">h</span>
-        <span class="n">In</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="p">(</span><span class="n">In</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="mf">0.5</span>
-
-
-<span class="k">def</span> <span class="nf">romberg</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-        <span class="c1"># Composite trapezoidal rule for 2^k panels</span>
-        <span class="n">I</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">trapezcomp</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="n">k</span><span class="p">)</span>
-
-        <span class="c1"># Romberg recursive formula</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-            <span class="n">I</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">I</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">I</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-        <span class="k">print</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># display intermediate results</span>
-
-    <span class="k">return</span> <span class="n">I</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-    <span class="n">p_rows</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="n">romberg</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">p_rows</span><span class="p">)</span>
-    <span class="n">solution</span> <span class="o">=</span> <span class="n">I</span><span class="p">[</span><span class="n">p_rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">p_rows</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">solution</span><span class="p">)</span>                  <span class="c1"># 1.00000000814</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;diff(2**cos(pi+sin(x)) at x=pi/2 is equal to = </span><span class="si">%04.20f</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">Richardson_dif</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="p">[</span><span class="mf">0.78539816</span><span class="p">]</span>
-<span class="p">[</span><span class="mf">0.94805945</span> <span class="mf">1.00227988</span><span class="p">]</span>
-<span class="p">[</span><span class="mf">0.9871158</span>  <span class="mf">1.00013458</span> <span class="mf">0.99999157</span><span class="p">]</span>
-<span class="p">[</span><span class="mf">0.99678517</span> <span class="mf">1.0000083</span>  <span class="mf">0.99999988</span> <span class="mf">1.00000001</span><span class="p">]</span>
-<span class="mf">1.0000000081440203</span>
+<div class="codehilite"><pre><span></span><span class="n">Numerical</span> <span class="n">differentiation</span> <span class="n">of</span> <span class="n">Func</span><span class="o">=-</span><span class="mf">0.1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.25</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.2</span> <span class="n">at</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="o">-</span><span class="mf">0.91250000000000530687</span>
+<span class="n">diff</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="n">at</span> <span class="n">x</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="ow">is</span> <span class="n">equal</span> <span class="n">to</span> <span class="o">=</span> <span class="mf">0.16849558398154249050</span>
 </pre></div>
 
 
@@ -709,7 +746,7 @@ MathJax.Hub.Config({
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Tugas3/" title="persamman linier" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Integrasi Numerik/" title="integrasi numerik" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -718,25 +755,11 @@ MathJax.Hub.Config({
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                persamman linier
+                integrasi numerik
               </span>
             </div>
           </a>
         
-        
-          <a href="../Extrapolasi Richardsonp/" title="Extrapolasi Richardsonp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Extrapolasi Richardsonp
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
